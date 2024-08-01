@@ -1,0 +1,17 @@
+header {
+    background-color: lightseagreen;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    background-color: #8cefc7;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: lightskyblue;
+    padding: 10px;
+    text-align: center;
+}
