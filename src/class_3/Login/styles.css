@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #004d40, #b8860b);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,14 +12,16 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     width: 350px;
 }
 
 .login-form h2, .signup-form h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #333333;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
 }
 
 .input-group {
@@ -30,6 +32,7 @@ body {
     display: block;
     margin-bottom: 5px;
     color: #555;
+    font-weight: bold;
 }
 
 .input-group input {
@@ -38,6 +41,13 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #b8860b;
 }
 
 .input-group input[type="checkbox"] {
@@ -55,23 +65,27 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: #6a11cb;
+    background: linear-gradient(to right, #006400, #daa520);
     color: #fff;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     text-align: center;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .input-group button:hover, .input-group .forgot-button:hover {
-    background: #2575fc;
+    background: linear-gradient(to right, #228b22, #ffdf00);
+    transform: translateY(-2px);
 }
 
 .input-group .forgot-button {
-    background: #f0f0f0;
-    color: #333;
+    background: linear-gradient(to right, #b8860b, #8b4513);
+    color: #fff;
 }
 
 .input-group .forgot-button:hover {
-    background: #ddd;
+    background: linear-gradient(to right, #daa520, #a0522d);
+    color: #fff;
 }
