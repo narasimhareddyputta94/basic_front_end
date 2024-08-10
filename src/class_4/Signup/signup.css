@@ -26,12 +26,25 @@ body {
 
 .input-group {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .input-group label {
-    display: block;
     margin-bottom: 5px;
     color: #004d40;
+    font-weight: bold;
+}
+
+.input-group input, .phone-input select {
+    padding: 6px;
+    border: 1px solid #8E8D8A;
+    border-radius: 5px;
+    background-color: #FFFFF0;
+    color: #004d40;
+    box-sizing: border-box;
+    width: 100%;
     font-weight: bold;
 }
 
@@ -41,32 +54,14 @@ body {
 }
 
 .phone-input select {
-    width: 80px;  /* Adjusted width for a smaller dropdown */
-    padding: 10px;
-    border: 1px solid #8E8D8A;
-    border-radius: 5px;
-    background-color: #FFFFF0;
-    color: #004d40;
-    font-weight: bold;
-    box-sizing: border-box;
+    flex: 1;
 }
 
 .phone-input input[type="tel"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #8E8D8A;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #FFFFF0;
-    transition: border-color 0.3s;
-}
-
-.phone-input input:focus {
-    border-color: #00796b;
+    flex: 3; /* Adjust to balance the width of the phone number input and the country code selector */
 }
 
 .input-group button {
-    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -75,8 +70,10 @@ body {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    text-align: center;
     transition: background 0.3s, transform 0.2s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .input-group button:hover {
