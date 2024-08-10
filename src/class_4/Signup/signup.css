@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #004d40, #8E8D8A);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-container {
+    background: #F5F5F5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004d40;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #004d40;
+    font-weight: bold;
+}
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-input select {
+    width: 80px;  /* Adjusted width for a smaller dropdown */
+    padding: 10px;
+    border: 1px solid #8E8D8A;
+    border-radius: 5px;
+    background-color: #FFFFF0;
+    color: #004d40;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.phone-input input[type="tel"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #8E8D8A;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #FFFFF0;
+    transition: border-color 0.3s;
+}
+
+.phone-input input:focus {
+    border-color: #00796b;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #00796b, #8E8D8A);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.input-group button:hover {
+    background: linear-gradient(to right, #004d40, #696969);
+    transform: translateY(-2px);
+}

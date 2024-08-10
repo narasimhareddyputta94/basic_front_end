@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #00796b, #b87333);
+    background: linear-gradient(to right, #004d40, #8E8D8A);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .login-container, .signup-container {
-    background: #FFFFF0;
+    background: #F5F5F5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@ body {
 .login-form h2, .signup-form h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333333;
+    color: #004d40;
     font-family: 'Georgia', serif;
     font-weight: bold;
 }
@@ -31,7 +31,7 @@ body {
 .input-group label {
     display: block;
     margin-bottom: 5px;
-    color: #333333;
+    color: #004d40;
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .input-group input:focus {
-    border-color: #b87333;
+    border-color: #00796b;
 }
 
 .input-group input[type="checkbox"] {
@@ -64,7 +64,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(to right, #00796b, #b87333);
+    background: linear-gradient(to right, #00796b, #8E8D8A);
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -75,18 +75,8 @@ body {
 }
 
 .input-group button:hover, .input-group .forgot-button:hover {
-    background: linear-gradient(to right, #00694e, #a0522d);
+    background: linear-gradient(to right, #004d40, #696969);
     transform: translateY(-2px);
-}
-
-.input-group .forgot-button {
-    background: linear-gradient(to right, #8E8D8A, #b87333);
-    color: #333333;
-}
-
-.input-group .forgot-button:hover {
-    background: linear-gradient(to right, #696969, #b87333);
-    color: #333333;
 }
 
 .social-login {
@@ -96,7 +86,7 @@ body {
 
 .social-login p {
     margin-bottom: 15px;
-    color: #333333;
+    color: #004d40;
     font-weight: bold;
 }
 
