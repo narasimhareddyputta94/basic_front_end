@@ -1,0 +1,96 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4b0082; /* Royal purple */
+    color: white;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    padding: 30px;
+    text-align: center;
+    width: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #4b0082; /* Royal purple */
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 15px 0;
+    color: #4b0082; /* Royal purple */
+}
+
+.product-card .price {
+    font-size: 1.6rem;
+    color: #8b0000; /* Deep red */
+    margin: 10px 0;
+}
+
+.product-card .description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.product-card button {
+    background-color: #8b0000; /* Deep red */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #6b0000;
+}
