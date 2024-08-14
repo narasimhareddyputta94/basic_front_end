@@ -1,20 +1,26 @@
+/* styles.css */
 
-*{
-    box-sizing: border-box;
-    padding: 5px;
-    border: 1px solid #8E8D8A;
+body {
+    background-color: #e0e0e0;
 }
-body{
-    color: #2ecc71;
-    border: 1px solid #caa225;
-    background-color: #f1c40f;
-    font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
+
+div {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px 0;
 }
-.main-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    color: #555;
 }
