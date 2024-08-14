@@ -1,0 +1,119 @@
+/* styles.css */
+
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 80px; /* Make space for fixed header */
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.fixed-header h1 {
+    margin: 0;
+}
+
+.fixed-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.fixed-nav ul li {
+    margin: 0 15px;
+}
+
+.fixed-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+    position: sticky;
+    top: 80px;
+    width: 250px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-right: 20px;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.relative-section {
+    position: relative;
+    background-color: #e7f3ff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+/* Relative Positioning */
+.relative-box {
+    position: relative;
+    background-color: #90cdf4;
+    padding: 10px;
+    top: 10px; /* Moved down from its original position */
+    left: 10px; /* Moved right from its original position */
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Absolute Positioning */
+.absolute-box {
+    position: absolute;
+    background-color: #63b3ed;
+    padding: 10px;
+    top: 50px; /* Positioned relative to the relative-section */
+    right: 10px; /* Positioned relative to the relative-section */
+    width: 200px;
+    height: 100px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 5px solid #ccc;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Fixed Header -->
+<header class="fixed-header">
+    <h1>My Website</h1>
+    <nav class="fixed-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <!-- Sidebar with Sticky Positioning -->
+    <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <p>This is a sticky sidebar.</p>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h2>Welcome to My Website</h2>
+        <p>This content uses static positioning by default.</p>
+
+        <section class="relative-section">
+            <h3>Relative Positioning</h3>
+            <div class="relative-box">
+                This box is positioned relative to its original position.
+            </div>
+            <div class="absolute-box">
+                This box is absolutely positioned within the relative container.
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>Footer content with static positioning.</p>
+</footer>
+
+</body>
+</html>
