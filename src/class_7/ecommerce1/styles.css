@@ -7,7 +7,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     padding-top: 100px; /* Make space for fixed header */
@@ -18,7 +18,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #1a1a1d;
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -30,8 +30,14 @@ body {
 }
 
 .fixed-header .logo {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
     margin-left: 20px;
+    color: #ff4500;
+}
+
+.fixed-header .logo span {
+    color: #f4f4f4;
 }
 
 .fixed-nav ul {
@@ -49,12 +55,27 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.fixed-nav ul li a.cart {
-    background-color: #ff4500;
-    padding: 5px 10px;
-    border-radius: 5px;
+.fixed-nav ul li a:hover {
+    color: #ff4500;
+}
+
+.fixed-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff4500;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.fixed-nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Promotional Banner */
@@ -64,9 +85,20 @@ body {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 100px 20px;
     position: relative;
     z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(26, 26, 29, 0.7);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .promo-banner h1 {
@@ -86,6 +118,7 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 .shop-now-btn:hover {
@@ -105,8 +138,9 @@ body {
     position: sticky;
     top: 100px;
     width: 250px;
-    background-color: #f8f8f8;
-    padding: 15px;
+    background-color: #1a1a1d;
+    color: white;
+    padding: 20px;
     margin-right: 20px;
     border-right: 2px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -126,7 +160,8 @@ body {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
@@ -138,8 +173,14 @@ body {
     flex: 1;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Enhanced Product Grid */
@@ -153,9 +194,15 @@ body {
 .product {
     background-color: #f4f4f4;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .product-image img {
@@ -181,6 +228,7 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .product-info button:hover {
@@ -191,10 +239,11 @@ body {
 .special-deal {
     background-color: #ffedd5;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: hidden;
 }
 
 .special-deal .deal-content {
@@ -205,7 +254,7 @@ body {
 
 .deal-image img {
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .deal-info {
@@ -231,6 +280,7 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .deal-info button:hover {
@@ -245,6 +295,8 @@ body {
     color: white;
     padding: 10px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .deal-timer .timer {
@@ -254,13 +306,13 @@ body {
     justify-content: center;
 }
 
-/* Customer Testimonials */
+/* Customer Testimonials with Relative Positioning */
 .testimonials {
     background-color: #e7f3ff;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-grid {
@@ -272,27 +324,51 @@ body {
 .testimonial {
     background-color: #f4f4f4;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial::before {
+    content: '“';
+    font-size: 80px;
+    color: #ff4500;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 0;
+    opacity: 0.1;
 }
 
 .testimonial p {
     font-style: italic;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .testimonial span {
     color: #555;
+    position: relative;
+    z-index: 1;
 }
 
 /* Footer with Multiple Sections */
 .footer {
-    background-color: #333;
+    background-color: #1a1a1d;
     color: white;
     padding: 40px 20px;
     margin-top: 20px;
-    border-top: 5px solid #ccc;
+    border-top: 5px solid #ff4500;
 }
 
 .footer-content {
@@ -328,6 +404,7 @@ body {
 .footer-section ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {

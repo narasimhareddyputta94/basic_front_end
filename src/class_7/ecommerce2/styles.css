@@ -1,0 +1,425 @@
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #668B70, #8E8D8A); /* Updated background gradient */
+    padding-top: 100px; /* Make space for fixed header */
+}
+
+/* Fixed Header with Navigation */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #668B70; /* Softer Green */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.fixed-header .logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #F5F5F5;
+}
+
+.fixed-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.fixed-nav ul li {
+    margin: 0 15px;
+}
+
+.fixed-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.fixed-nav ul li a:hover {
+    color: #8E8D8A; /* Light Gray Hover */
+}
+
+.fixed-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #8E8D8A; /* Consistent border color */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.fixed-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Promotional Banner */
+.promo-banner {
+    background-image: url('https://via.placeholder.com/1200x300');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(102, 139, 112, 0.8); /* Slightly transparent softer green */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.promo-banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #F5F5F5; /* Consistent text color */
+}
+
+.promo-banner p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #F5F5F5;
+}
+
+.shop-now-btn {
+    background: linear-gradient(to right, #00796b, #8E8D8A); /* Consistent gradient */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.shop-now-btn:hover {
+    background: linear-gradient(to right, #668B70, #696969); /* Updated hover effect */
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+    position: sticky;
+    top: 100px;
+    width: 250px;
+    background-color: #668B70; /* Softer Green */
+    color: white;
+    padding: 20px;
+    margin-right: 20px;
+    border-right: 2px solid #8E8D8A; /* Consistent border color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    color: #F5F5F5; /* Consistent text color */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #F5F5F5; /* Consistent text color */
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #8E8D8A; /* Light Gray Hover */
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    background-color: #F5F5F5; /* Light Gray Background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Enhanced Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.product {
+    background-color: #F5F5F5; /* Light Gray Background */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Consistent hover effect */
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: #668B70; /* Softer Green */
+}
+
+.product-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-info button {
+    background: linear-gradient(to right, #00796b, #8E8D8A); /* Consistent gradient */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.product-info button:hover {
+    background: linear-gradient(to right, #668B70, #696969); /* Updated hover effect */
+    transform: translateY(-2px);
+}
+
+/* Special Deal Section */
+.special-deal {
+    background-color: #F5F5F5; /* Light Gray Background */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+.special-deal .deal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deal-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.deal-info {
+    max-width: 50%;
+    text-align: center;
+}
+
+.deal-info h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #668B70; /* Softer Green */
+}
+
+.deal-info p {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.deal-info button {
+    background: linear-gradient(to right, #00796b, #8E8D8A); /* Consistent gradient */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.deal-info button:hover {
+    background: linear-gradient(to right, #668B70, #696969); /* Updated hover effect */
+    transform: translateY(-2px);
+}
+
+.deal-timer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #00796b; /* Teal Background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.deal-timer .timer {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+/* Customer Testimonials with Relative Positioning */
+.testimonials {
+    background-color: #F5F5F5; /* Light Gray Background */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #F5F5F5; /* Light Gray Background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Consistent box-shadow */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Consistent hover effect */
+}
+
+.testimonial::before {
+    content: '“';
+    font-size: 80px;
+    color: #00796b; /* Teal */
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial span {
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer with Multiple Sections */
+.footer {
+    background-color: #668B70; /* Softer Green */
+    color: white;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-top: 5px solid #00796b; /* Teal Border */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #F5F5F5; /* Consistent text color */
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #F5F5F5;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #F5F5F5; /* Consistent text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #8E8D8A; /* Light Gray Hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
